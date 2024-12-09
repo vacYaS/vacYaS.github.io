@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>PaperMod on </title>
+    <link>https://vacya.me/tags/papermod/</link>
+    <description>Recent content in PaperMod on </description>
+    <generator>Hugo -- 0.139.3</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 24 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://vacya.me/tags/papermod/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo&amp;PaperMod一些修改</title>
+      <link>https://vacya.me/posts/%E5%85%B6%E4%BB%96/hugopapermod%E4%B8%80%E4%BA%9B%E4%BF%AE%E6%94%B9/</link>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://vacya.me/posts/%E5%85%B6%E4%BB%96/hugopapermod%E4%B8%80%E4%BA%9B%E4%BF%AE%E6%94%B9/</guid>
+      <description>&lt;h1 id=&#34;给文章添加最后更新时间&#34;&gt;给文章添加最后更新时间&lt;/h1&gt;
+&lt;p&gt;在 PaperMod 的 中加上三行：post_meta.html&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{- if gt .Lastmod .Date -}}
+{{- $scratch.Add &amp;#34;meta&amp;#34; (slice (printf &amp;#34;&amp;lt;span title=&amp;#39;%s&amp;#39;&amp;gt;(updated: %s)&amp;lt;/span&amp;gt;&amp;#34; (.Lastmod) (.Lastmod | time.Format (default &amp;#34;January 2, 2006&amp;#34; .Site.Params.DateFormat)))) }}
+{{- end }}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在 Hugo 的 Front Matter 下手动加上 属性即可：lastmod&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;title: 折腾 Hugo &amp;amp; PaperMod 主题
+slug: hugo-papermod-config
+author: Dvel
+date: 2022-01-11T15:15:38+08:00
+lastmod: 2023-02-14T00:40:08+08:00
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;评论功能&#34;&gt;评论功能&lt;/h1&gt;
+&lt;p&gt;代码来源&lt;a href=&#34;https://dvel.me/posts/hugo-papermod-config/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dvel&lt;/a&gt;
+修改comments.html&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{- /* Comments area start */ -}}
+{{- /* to add comments read =&amp;gt; https://gohugo.io/content-management/comments/ */ -}}
+
+&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://unpkg.com/@waline/client@v2/dist/waline.css&amp;#34; /&amp;gt;
+
+&amp;lt;div id=&amp;#34;waline&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt;
+    import { init } from &amp;#39;https://unpkg.com/@waline/client@v2/dist/waline.mjs&amp;#39;;
+    const locale = {
+        nick: &amp;#39;昵称&amp;#39;,
+        nickError: &amp;#39;请填写昵称&amp;#39;,
+        mail: &amp;#39;邮箱&amp;#39;,
+        mailError: &amp;#39;请填写正确的邮件地址&amp;#39;,
+        link: &amp;#39;网址&amp;#39;,
+        optional: &amp;#39;可选&amp;#39;,
+        placeholder: &amp;#39;仅填写昵称即可发表回复。\n填写邮箱可收到回复提醒。\n评论区支持 Markdown 语法及预览。\n&amp;#39;,
+        sofa: &amp;#39;来发评论吧~&amp;#39;,
+        submit: &amp;#39;提交&amp;#39;,
+        like: &amp;#39;喜欢&amp;#39;,
+        cancelLike: &amp;#39;取消喜欢&amp;#39;,
+        reply: &amp;#39;回复&amp;#39;,
+        cancelReply: &amp;#39;取消回复&amp;#39;,
+        comment: &amp;#39;评论&amp;#39;,
+        refresh: &amp;#39;刷新&amp;#39;,
+        more: &amp;#39;加载更多...&amp;#39;,
+        preview: &amp;#39;预览&amp;#39;,
+        emoji: &amp;#39;表情&amp;#39;,
+        uploadImage: &amp;#39;上传图片&amp;#39;,
+        seconds: &amp;#39;秒前&amp;#39;,
+        minutes: &amp;#39;分钟前&amp;#39;,
+        hours: &amp;#39;小时前&amp;#39;,
+        days: &amp;#39;天前&amp;#39;,
+        now: &amp;#39;刚刚&amp;#39;,
+        uploading: &amp;#39;正在上传&amp;#39;,
+        login: &amp;#39;管理&amp;#39;,
+        logout: &amp;#39;退出&amp;#39;,
+        admin: &amp;#39;博主&amp;#39;,
+        sticky: &amp;#39;置顶&amp;#39;,
+        word: &amp;#39;字&amp;#39;,
+        wordHint: &amp;#39;评论字数应在 $0 到 $1 字之间！\n当前字数：$2&amp;#39;,
+        anonymous: &amp;#39;匿名&amp;#39;,
+        level0: &amp;#39;潜水&amp;#39;,
+        level1: &amp;#39;冒泡&amp;#39;,
+        level2: &amp;#39;吐槽&amp;#39;,
+        level3: &amp;#39;活跃&amp;#39;,
+        level4: &amp;#39;话痨&amp;#39;,
+        level5: &amp;#39;传说&amp;#39;,
+        gif: &amp;#39;表情包&amp;#39;,
+        gifSearchPlaceholder: &amp;#39;搜索表情包&amp;#39;,
+        profile: &amp;#39;个人资料&amp;#39;,
+        approved: &amp;#39;通过&amp;#39;,
+        waiting: &amp;#39;待审核&amp;#39;,
+        spam: &amp;#39;垃圾&amp;#39;,
+        unsticky: &amp;#39;取消置顶&amp;#39;,
+        oldest: &amp;#39;按倒序&amp;#39;,
+        latest: &amp;#39;按正序&amp;#39;,
+        hottest: &amp;#39;按热度&amp;#39;,
+        reactionTitle: &amp;#39;你认为这篇文章怎么样？&amp;#39;,
+    };
+    init({
+        // options
+        el: &amp;#39;#waline&amp;#39;,
+        serverURL: &amp;#39;https://comment.dvel.me&amp;#39;,
+        locale,
+        emoji: false,     // 表情
+        search: false,    // GIF 表情包
+        reaction: false,  // 文章反应
+        requiredMeta: [&amp;#39;nick&amp;#39;],
+        pageSize: 10,
+        imageUploader: false,
+        copyright: true,
+        pageview: true,
+        like: false,
+    });
+&amp;lt;/script&amp;gt;
+
+{{- /* Comments area end */ -}}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;img\01\AS.jpg&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
