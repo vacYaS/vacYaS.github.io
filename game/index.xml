@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title></title>
-    <link>vacya.me/game/</link>
+    <link>/game/</link>
     <description>Recent content on </description>
     <generator>Hugo -- 0.139.3</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 20 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="vacya.me/game/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/game/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>百度会员促销活动充值</title>
-      <link>vacya.me/game/%E7%BD%91%E7%9B%98%E5%85%85%E5%80%BC/</link>
+      <link>/game/%E7%BD%91%E7%9B%98%E5%85%85%E5%80%BC/</link>
       <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>vacya.me/game/%E7%BD%91%E7%9B%98%E5%85%85%E5%80%BC/</guid>
+      <guid>/game/%E7%BD%91%E7%9B%98%E5%85%85%E5%80%BC/</guid>
       <description>&lt;h1 id=&#34;百度网盘-低价svip-超级会员&#34;&gt;百度网盘 低价SVIP 超级会员&lt;/h1&gt;
 &lt;p&gt;官方续费 微信/支付宝 渠道特价&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://snsyun.baidu.com/sl/c1pQFCG&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;百度网盘促销活动&lt;/a&gt;
 19元/月, 197元/年, 首充用户价格会更低一点, 是已知(续费)最低价格了.&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;vacya.me/img/01/AS.jpg&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;/img/01/AS.jpg&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

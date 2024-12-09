@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>vacya.me/game/%E7%BD%91%E7%9B%98%E5%85%85%E5%80%BC/</loc>
+    <loc>/game/%E7%BD%91%E7%9B%98%E5%85%85%E5%80%BC/</loc>
     <lastmod>2024-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>vacya.me/</loc>
+    <loc>/</loc>
     <lastmod>2024-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>vacya.me/%E5%9B%BE%E9%9B%86/</loc>
+    <loc>/%E5%9B%BE%E9%9B%86/</loc>
     <lastmod>2024-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>vacya.me/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2024-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>vacya.me/tags/%E4%B8%89%E6%AC%A1%E5%85%83/</loc>
+    <loc>/tags/%E4%B8%89%E6%AC%A1%E5%85%83/</loc>
     <lastmod>2024-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>vacya.me/tags/%E5%9B%BE%E7%89%87/</loc>
+    <loc>/tags/%E5%9B%BE%E7%89%87/</loc>
     <lastmod>2024-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>vacya.me/%E5%9B%BE%E9%9B%86/%E6%9B%B4%E6%96%B0%E5%88%97%E8%A1%A8/</loc>
+    <loc>/%E5%9B%BE%E9%9B%86/%E6%9B%B4%E6%96%B0%E5%88%97%E8%A1%A8/</loc>
     <lastmod>2024-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>vacya.me/game/</loc>
+    <loc>/game/</loc>
     <lastmod>2024-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>vacya.me/posts/%E5%85%B6%E4%BB%96/</loc>
+    <loc>/posts/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2024-11-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>vacya.me/posts/%E5%85%B6%E4%BB%96/hugopapermod%E4%B8%80%E4%BA%9B%E4%BF%AE%E6%94%B9/</loc>
+    <loc>/posts/%E5%85%B6%E4%BB%96/hugopapermod%E4%B8%80%E4%BA%9B%E4%BF%AE%E6%94%B9/</loc>
     <lastmod>2024-11-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>vacya.me/tags/papermod/</loc>
+    <loc>/tags/papermod/</loc>
     <lastmod>2024-11-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>vacya.me/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2024-11-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>vacya.me/tags/%E6%95%99%E7%A8%8B/</loc>
+    <loc>/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2024-11-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>vacya.me/tags/%E6%B4%BB%E5%8A%A8/</loc>
+    <loc>/tags/%E6%B4%BB%E5%8A%A8/</loc>
     <lastmod>2024-11-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>vacya.me/archives/</loc>
+    <loc>/archives/</loc>
   </url><url>
-    <loc>vacya.me/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>vacya.me/search/</loc>
+    <loc>/search/</loc>
   </url>
 </urlset>
