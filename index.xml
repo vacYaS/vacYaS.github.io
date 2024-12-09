@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title></title>
-    <link>http://localhost:1313/</link>
+    <link>vacya.me/</link>
     <description>Recent content on </description>
     <generator>Hugo -- 0.139.3</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 25 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="vacya.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>百度会员促销活动充值</title>
-      <link>http://localhost:1313/game/%E7%BD%91%E7%9B%98%E5%85%85%E5%80%BC/</link>
+      <link>vacya.me/game/%E7%BD%91%E7%9B%98%E5%85%85%E5%80%BC/</link>
       <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/game/%E7%BD%91%E7%9B%98%E5%85%85%E5%80%BC/</guid>
+      <guid>vacya.me/game/%E7%BD%91%E7%9B%98%E5%85%85%E5%80%BC/</guid>
       <description>&lt;h1 id=&#34;百度网盘-低价svip-超级会员&#34;&gt;百度网盘 低价SVIP 超级会员&lt;/h1&gt;
 &lt;p&gt;官方续费 微信/支付宝 渠道特价&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://snsyun.baidu.com/sl/c1pQFCG&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;百度网盘促销活动&lt;/a&gt;
 19元/月, 197元/年, 首充用户价格会更低一点, 是已知(续费)最低价格了.&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/img/01/AS.jpg&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;vacya.me/img/01/AS.jpg&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>更新列表</title>
-      <link>http://localhost:1313/%E5%9B%BE%E9%9B%86/%E6%9B%B4%E6%96%B0%E5%88%97%E8%A1%A8/</link>
+      <link>vacya.me/%E5%9B%BE%E9%9B%86/%E6%9B%B4%E6%96%B0%E5%88%97%E8%A1%A8/</link>
       <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/%E5%9B%BE%E9%9B%86/%E6%9B%B4%E6%96%B0%E5%88%97%E8%A1%A8/</guid>
+      <guid>vacya.me/%E5%9B%BE%E9%9B%86/%E6%9B%B4%E6%96%B0%E5%88%97%E8%A1%A8/</guid>
       <description>&lt;p&gt;123546&lt;/p&gt;</description>
     </item>
     <item>
       <title>hugo&amp;PaperMod一些修改</title>
-      <link>http://localhost:1313/posts/%E5%85%B6%E4%BB%96/hugopapermod%E4%B8%80%E4%BA%9B%E4%BF%AE%E6%94%B9/</link>
+      <link>vacya.me/posts/%E5%85%B6%E4%BB%96/hugopapermod%E4%B8%80%E4%BA%9B%E4%BF%AE%E6%94%B9/</link>
       <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/%E5%85%B6%E4%BB%96/hugopapermod%E4%B8%80%E4%BA%9B%E4%BF%AE%E6%94%B9/</guid>
+      <guid>vacya.me/posts/%E5%85%B6%E4%BB%96/hugopapermod%E4%B8%80%E4%BA%9B%E4%BF%AE%E6%94%B9/</guid>
       <description>&lt;h1 id=&#34;给文章添加最后更新时间&#34;&gt;给文章添加最后更新时间&lt;/h1&gt;
 &lt;p&gt;在 PaperMod 的 中加上三行：post_meta.html&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{- if gt .Lastmod .Date -}}

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>hugo&amp;PaperMod一些修改 | </title>
 <meta name="keywords" content="教程, PaperMod, 活动">
 <meta name="description" content="给文章添加最后更新时间
@@ -100,16 +100,16 @@ lastmod: 2023-02-14T00:40:08&#43;08:00
 {{- /* Comments area end */ -}}
 img\01\AS.jpg">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/%E5%85%B6%E4%BB%96/hugopapermod%E4%B8%80%E4%BA%9B%E4%BF%AE%E6%94%B9/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/img/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/img/logo/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/img/logo/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="vacya.me/posts/%E5%85%B6%E4%BB%96/hugopapermod%E4%B8%80%E4%BA%9B%E4%BF%AE%E6%94%B9/">
+<link crossorigin="anonymous" href="vacya.me/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="vacya.me/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="vacya.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="vacya.me/img/logo/favicon-32x32.png">
+<link rel="apple-touch-icon" href="vacya.me/img/logo/apple-touch-icon.png">
+<link rel="mask-icon" href="vacya.me/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/%E5%85%B6%E4%BB%96/hugopapermod%E4%B8%80%E4%BA%9B%E4%BF%AE%E6%94%B9/">
+<link rel="alternate" hreflang="en" href="vacya.me/posts/%E5%85%B6%E4%BB%96/hugopapermod%E4%B8%80%E4%BA%9B%E4%BF%AE%E6%94%B9/">
 <noscript>
     <style>
         #theme-toggle,
@@ -167,6 +167,173 @@ img\01\AS.jpg">
 </script>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DWRBNRT80B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DWRBNRT80B');
+</script>
+<meta property="og:url" content="vacya.me/posts/%E5%85%B6%E4%BB%96/hugopapermod%E4%B8%80%E4%BA%9B%E4%BF%AE%E6%94%B9/">
+  <meta property="og:title" content="hugo&PaperMod一些修改">
+  <meta property="og:description" content="给文章添加最后更新时间 在 PaperMod 的 中加上三行：post_meta.html
+{{- if gt .Lastmod .Date -}}{{- $scratch.Add &#34;meta&#34; (slice (printf &#34;&lt;span title=&#39;%s&#39;&gt;(updated: %s)&lt;/span&gt;&#34; (.Lastmod) (.Lastmod | time.Format (default &#34;January 2, 2006&#34; .Site.Params.DateFormat)))) }}{{- end }} 在 Hugo 的 Front Matter 下手动加上 属性即可：lastmod
+title: 折腾 Hugo &amp; PaperMod 主题slug: hugo-papermod-configauthor: Dveldate: 2022-01-11T15:15:38&#43;08:00lastmod: 2023-02-14T00:40:08&#43;08:00 评论功能 代码来源dvel 修改comments.html
+{{- /* Comments area start */ -}}{{- /* to add comments read =&gt; https://gohugo.io/content-management/comments/ */ -}}&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/@waline/client@v2/dist/waline.css&#34; /&gt;&lt;div id=&#34;waline&#34;&gt;&lt;/div&gt;&lt;script type=&#34;module&#34;&gt;import { init } from &#39;https://unpkg.com/@waline/client@v2/dist/waline.mjs&#39;;const locale = {nick: &#39;昵称&#39;,nickError: &#39;请填写昵称&#39;,mail: &#39;邮箱&#39;,mailError: &#39;请填写正确的邮件地址&#39;,link: &#39;网址&#39;,optional: &#39;可选&#39;,placeholder: &#39;仅填写昵称即可发表回复。\n填写邮箱可收到回复提醒。\n评论区支持 Markdown 语法及预览。\n&#39;,sofa: &#39;来发评论吧~&#39;,submit: &#39;提交&#39;,like: &#39;喜欢&#39;,cancelLike: &#39;取消喜欢&#39;,reply: &#39;回复&#39;,cancelReply: &#39;取消回复&#39;,comment: &#39;评论&#39;,refresh: &#39;刷新&#39;,more: &#39;加载更多...&#39;,preview: &#39;预览&#39;,emoji: &#39;表情&#39;,uploadImage: &#39;上传图片&#39;,seconds: &#39;秒前&#39;,minutes: &#39;分钟前&#39;,hours: &#39;小时前&#39;,days: &#39;天前&#39;,now: &#39;刚刚&#39;,uploading: &#39;正在上传&#39;,login: &#39;管理&#39;,logout: &#39;退出&#39;,admin: &#39;博主&#39;,sticky: &#39;置顶&#39;,word: &#39;字&#39;,wordHint: &#39;评论字数应在 $0 到 $1 字之间！\n当前字数：$2&#39;,anonymous: &#39;匿名&#39;,level0: &#39;潜水&#39;,level1: &#39;冒泡&#39;,level2: &#39;吐槽&#39;,level3: &#39;活跃&#39;,level4: &#39;话痨&#39;,level5: &#39;传说&#39;,gif: &#39;表情包&#39;,gifSearchPlaceholder: &#39;搜索表情包&#39;,profile: &#39;个人资料&#39;,approved: &#39;通过&#39;,waiting: &#39;待审核&#39;,spam: &#39;垃圾&#39;,unsticky: &#39;取消置顶&#39;,oldest: &#39;按倒序&#39;,latest: &#39;按正序&#39;,hottest: &#39;按热度&#39;,reactionTitle: &#39;你认为这篇文章怎么样？&#39;,};init({// optionsel: &#39;#waline&#39;,serverURL: &#39;https://comment.dvel.me&#39;,locale,emoji: false, // 表情search: false, // GIF 表情包reaction: false, // 文章反应requiredMeta: [&#39;nick&#39;],pageSize: 10,imageUploader: false,copyright: true,pageview: true,like: false,});&lt;/script&gt;{{- /* Comments area end */ -}} img\01\AS.jpg">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-11-24T00:00:00+00:00">
+    <meta property="article:tag" content="教程">
+    <meta property="article:tag" content="PaperMod">
+    <meta property="article:tag" content="活动">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hugo&amp;PaperMod一些修改">
+<meta name="twitter:description" content="给文章添加最后更新时间
+在 PaperMod 的 中加上三行：post_meta.html
+{{- if gt .Lastmod .Date -}}
+{{- $scratch.Add &#34;meta&#34; (slice (printf &#34;&lt;span title=&#39;%s&#39;&gt;(updated: %s)&lt;/span&gt;&#34; (.Lastmod) (.Lastmod | time.Format (default &#34;January 2, 2006&#34; .Site.Params.DateFormat)))) }}
+{{- end }}
+在 Hugo 的 Front Matter 下手动加上 属性即可：lastmod
+title: 折腾 Hugo &amp; PaperMod 主题
+slug: hugo-papermod-config
+author: Dvel
+date: 2022-01-11T15:15:38&#43;08:00
+lastmod: 2023-02-14T00:40:08&#43;08:00
+评论功能
+代码来源dvel
+修改comments.html
+{{- /* Comments area start */ -}}
+{{- /* to add comments read =&gt; https://gohugo.io/content-management/comments/ */ -}}
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/@waline/client@v2/dist/waline.css&#34; /&gt;
+
+&lt;div id=&#34;waline&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;module&#34;&gt;
+    import { init } from &#39;https://unpkg.com/@waline/client@v2/dist/waline.mjs&#39;;
+    const locale = {
+        nick: &#39;昵称&#39;,
+        nickError: &#39;请填写昵称&#39;,
+        mail: &#39;邮箱&#39;,
+        mailError: &#39;请填写正确的邮件地址&#39;,
+        link: &#39;网址&#39;,
+        optional: &#39;可选&#39;,
+        placeholder: &#39;仅填写昵称即可发表回复。\n填写邮箱可收到回复提醒。\n评论区支持 Markdown 语法及预览。\n&#39;,
+        sofa: &#39;来发评论吧~&#39;,
+        submit: &#39;提交&#39;,
+        like: &#39;喜欢&#39;,
+        cancelLike: &#39;取消喜欢&#39;,
+        reply: &#39;回复&#39;,
+        cancelReply: &#39;取消回复&#39;,
+        comment: &#39;评论&#39;,
+        refresh: &#39;刷新&#39;,
+        more: &#39;加载更多...&#39;,
+        preview: &#39;预览&#39;,
+        emoji: &#39;表情&#39;,
+        uploadImage: &#39;上传图片&#39;,
+        seconds: &#39;秒前&#39;,
+        minutes: &#39;分钟前&#39;,
+        hours: &#39;小时前&#39;,
+        days: &#39;天前&#39;,
+        now: &#39;刚刚&#39;,
+        uploading: &#39;正在上传&#39;,
+        login: &#39;管理&#39;,
+        logout: &#39;退出&#39;,
+        admin: &#39;博主&#39;,
+        sticky: &#39;置顶&#39;,
+        word: &#39;字&#39;,
+        wordHint: &#39;评论字数应在 $0 到 $1 字之间！\n当前字数：$2&#39;,
+        anonymous: &#39;匿名&#39;,
+        level0: &#39;潜水&#39;,
+        level1: &#39;冒泡&#39;,
+        level2: &#39;吐槽&#39;,
+        level3: &#39;活跃&#39;,
+        level4: &#39;话痨&#39;,
+        level5: &#39;传说&#39;,
+        gif: &#39;表情包&#39;,
+        gifSearchPlaceholder: &#39;搜索表情包&#39;,
+        profile: &#39;个人资料&#39;,
+        approved: &#39;通过&#39;,
+        waiting: &#39;待审核&#39;,
+        spam: &#39;垃圾&#39;,
+        unsticky: &#39;取消置顶&#39;,
+        oldest: &#39;按倒序&#39;,
+        latest: &#39;按正序&#39;,
+        hottest: &#39;按热度&#39;,
+        reactionTitle: &#39;你认为这篇文章怎么样？&#39;,
+    };
+    init({
+        // options
+        el: &#39;#waline&#39;,
+        serverURL: &#39;https://comment.dvel.me&#39;,
+        locale,
+        emoji: false,     // 表情
+        search: false,    // GIF 表情包
+        reaction: false,  // 文章反应
+        requiredMeta: [&#39;nick&#39;],
+        pageSize: 10,
+        imageUploader: false,
+        copyright: true,
+        pageview: true,
+        like: false,
+    });
+&lt;/script&gt;
+
+{{- /* Comments area end */ -}}
+img\01\AS.jpg">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "vacya.me/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "hugo\u0026PaperMod一些修改",
+      "item": "vacya.me/posts/%E5%85%B6%E4%BB%96/hugopapermod%E4%B8%80%E4%BA%9B%E4%BF%AE%E6%94%B9/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "hugo\u0026PaperMod一些修改",
+  "name": "hugo\u0026PaperMod一些修改",
+  "description": "给文章添加最后更新时间 在 PaperMod 的 中加上三行：post_meta.html\n{{- if gt .Lastmod .Date -}}\r{{- $scratch.Add \u0026#34;meta\u0026#34; (slice (printf \u0026#34;\u0026lt;span title=\u0026#39;%s\u0026#39;\u0026gt;(updated: %s)\u0026lt;/span\u0026gt;\u0026#34; (.Lastmod) (.Lastmod | time.Format (default \u0026#34;January 2, 2006\u0026#34; .Site.Params.DateFormat)))) }}\r{{- end }} 在 Hugo 的 Front Matter 下手动加上 属性即可：lastmod\ntitle: 折腾 Hugo \u0026amp; PaperMod 主题\rslug: hugo-papermod-config\rauthor: Dvel\rdate: 2022-01-11T15:15:38+08:00\rlastmod: 2023-02-14T00:40:08+08:00 评论功能 代码来源dvel 修改comments.html\n{{- /* Comments area start */ -}}\r{{- /* to add comments read =\u0026gt; https://gohugo.io/content-management/comments/ */ -}}\r\u0026lt;link rel=\u0026#34;stylesheet\u0026#34; href=\u0026#34;https://unpkg.com/@waline/client@v2/dist/waline.css\u0026#34; /\u0026gt;\r\u0026lt;div id=\u0026#34;waline\u0026#34;\u0026gt;\u0026lt;/div\u0026gt;\r\u0026lt;script type=\u0026#34;module\u0026#34;\u0026gt;\rimport { init } from \u0026#39;https://unpkg.com/@waline/client@v2/dist/waline.mjs\u0026#39;;\rconst locale = {\rnick: \u0026#39;昵称\u0026#39;,\rnickError: \u0026#39;请填写昵称\u0026#39;,\rmail: \u0026#39;邮箱\u0026#39;,\rmailError: \u0026#39;请填写正确的邮件地址\u0026#39;,\rlink: \u0026#39;网址\u0026#39;,\roptional: \u0026#39;可选\u0026#39;,\rplaceholder: \u0026#39;仅填写昵称即可发表回复。\\n填写邮箱可收到回复提醒。\\n评论区支持 Markdown 语法及预览。\\n\u0026#39;,\rsofa: \u0026#39;来发评论吧~\u0026#39;,\rsubmit: \u0026#39;提交\u0026#39;,\rlike: \u0026#39;喜欢\u0026#39;,\rcancelLike: \u0026#39;取消喜欢\u0026#39;,\rreply: \u0026#39;回复\u0026#39;,\rcancelReply: \u0026#39;取消回复\u0026#39;,\rcomment: \u0026#39;评论\u0026#39;,\rrefresh: \u0026#39;刷新\u0026#39;,\rmore: \u0026#39;加载更多...\u0026#39;,\rpreview: \u0026#39;预览\u0026#39;,\remoji: \u0026#39;表情\u0026#39;,\ruploadImage: \u0026#39;上传图片\u0026#39;,\rseconds: \u0026#39;秒前\u0026#39;,\rminutes: \u0026#39;分钟前\u0026#39;,\rhours: \u0026#39;小时前\u0026#39;,\rdays: \u0026#39;天前\u0026#39;,\rnow: \u0026#39;刚刚\u0026#39;,\ruploading: \u0026#39;正在上传\u0026#39;,\rlogin: \u0026#39;管理\u0026#39;,\rlogout: \u0026#39;退出\u0026#39;,\radmin: \u0026#39;博主\u0026#39;,\rsticky: \u0026#39;置顶\u0026#39;,\rword: \u0026#39;字\u0026#39;,\rwordHint: \u0026#39;评论字数应在 $0 到 $1 字之间！\\n当前字数：$2\u0026#39;,\ranonymous: \u0026#39;匿名\u0026#39;,\rlevel0: \u0026#39;潜水\u0026#39;,\rlevel1: \u0026#39;冒泡\u0026#39;,\rlevel2: \u0026#39;吐槽\u0026#39;,\rlevel3: \u0026#39;活跃\u0026#39;,\rlevel4: \u0026#39;话痨\u0026#39;,\rlevel5: \u0026#39;传说\u0026#39;,\rgif: \u0026#39;表情包\u0026#39;,\rgifSearchPlaceholder: \u0026#39;搜索表情包\u0026#39;,\rprofile: \u0026#39;个人资料\u0026#39;,\rapproved: \u0026#39;通过\u0026#39;,\rwaiting: \u0026#39;待审核\u0026#39;,\rspam: \u0026#39;垃圾\u0026#39;,\runsticky: \u0026#39;取消置顶\u0026#39;,\roldest: \u0026#39;按倒序\u0026#39;,\rlatest: \u0026#39;按正序\u0026#39;,\rhottest: \u0026#39;按热度\u0026#39;,\rreactionTitle: \u0026#39;你认为这篇文章怎么样？\u0026#39;,\r};\rinit({\r// options\rel: \u0026#39;#waline\u0026#39;,\rserverURL: \u0026#39;https://comment.dvel.me\u0026#39;,\rlocale,\remoji: false, // 表情\rsearch: false, // GIF 表情包\rreaction: false, // 文章反应\rrequiredMeta: [\u0026#39;nick\u0026#39;],\rpageSize: 10,\rimageUploader: false,\rcopyright: true,\rpageview: true,\rlike: false,\r});\r\u0026lt;/script\u0026gt;\r{{- /* Comments area end */ -}} img\\01\\AS.jpg\n",
+  "keywords": [
+    "教程", "PaperMod", "活动"
+  ],
+  "articleBody": "给文章添加最后更新时间 在 PaperMod 的 中加上三行：post_meta.html\n{{- if gt .Lastmod .Date -}}\r{{- $scratch.Add \"meta\" (slice (printf \"(updated: %s)\" (.Lastmod) (.Lastmod | time.Format (default \"January 2, 2006\" .Site.Params.DateFormat)))) }}\r{{- end }} 在 Hugo 的 Front Matter 下手动加上 属性即可：lastmod\ntitle: 折腾 Hugo \u0026 PaperMod 主题\rslug: hugo-papermod-config\rauthor: Dvel\rdate: 2022-01-11T15:15:38+08:00\rlastmod: 2023-02-14T00:40:08+08:00 评论功能 代码来源dvel 修改comments.html\n{{- /* Comments area start */ -}}\r{{- /* to add comments read =\u003e https://gohugo.io/content-management/comments/ */ -}}\r{{- /* Comments area end */ -}} img\\01\\AS.jpg\n侧边目录 1、添加toc.html文件 在项目目录layouts/partials下添加toc.html文件\n{{- $headers := findRE \"(.|\\n])+?\" .Content -}}\r{{- $has_headers := ge (len $headers) 1 -}}\r{{- if $has_headers -}}\r",
+  "wordCount" : "2742",
+  "inLanguage": "en",
+  "datePublished": "2024-11-20T00:00:00Z",
+  "dateModified": "2024-11-24T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "vacya.me/posts/%E5%85%B6%E4%BB%96/hugopapermod%E4%B8%80%E4%BA%9B%E4%BF%AE%E6%94%B9/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "vacya.me/img/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -209,42 +376,42 @@ img\01\AS.jpg">
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="首页">
+                <a href="vacya.me/vacya.me/" title="首页">
                     <span>首页</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/categories/" title="categories">
+                <a href="vacya.me/vacya.me/categories/" title="categories">
                     <span>categories</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/tags/" title="标签">
+                <a href="vacya.me/vacya.me/tags/" title="标签">
                     <span>标签</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/archives/" title="归档">
+                <a href="vacya.me/vacya.me/archives/" title="归档">
                     <span>归档</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/game/" title="Game">
+                <a href="vacya.me/vacya.me/game/" title="Game">
                     <span>Game</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/%E5%9B%BE%E9%9B%86/" title="图集">
+                <a href="vacya.me/vacya.me/%E5%9B%BE%E9%9B%86/" title="图集">
                     <span>图集</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/%E5%85%B6%E4%BB%96/" title="其他">
+                <a href="vacya.me/vacya.me/posts/%E5%85%B6%E4%BB%96/" title="其他">
                     <span>其他</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                <a href="vacya.me/vacya.me/search/" title="搜索 (Alt &#43; /)" accesskey=/>
                     <span>搜索</span>
                 </a>
             </li>
@@ -1021,7 +1188,7 @@ lastmod: 2023-02-14T00:40:08+08:00
 	
 	<ul>
 	  
-	  <li><a href="/game/%E7%BD%91%E7%9B%98%E5%85%85%E5%80%BC/">百度会员促销活动充值</a></li>
+	  <li><a href="vacya.me/game/%E7%BD%91%E7%9B%98%E5%85%85%E5%80%BC/">百度会员促销活动充值</a></li>
 	  
 	</ul>
 	
@@ -1030,9 +1197,9 @@ lastmod: 2023-02-14T00:40:08+08:00
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/%E6%95%99%E7%A8%8B/">教程</a></li>
-      <li><a href="http://localhost:1313/tags/papermod/">PaperMod</a></li>
-      <li><a href="http://localhost:1313/tags/%E6%B4%BB%E5%8A%A8/">活动</a></li>
+      <li><a href="vacya.me/tags/%E6%95%99%E7%A8%8B/">教程</a></li>
+      <li><a href="vacya.me/tags/papermod/">PaperMod</a></li>
+      <li><a href="vacya.me/tags/%E6%B4%BB%E5%8A%A8/">活动</a></li>
     </ul>
 
   </footer><link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
@@ -1111,7 +1278,7 @@ lastmod: 2023-02-14T00:40:08+08:00
     </main>
     
 <footer class="footer">
-        <span>&copy; 2024 <a href="http://localhost:1313/"></a></span> · 
+        <span>&copy; 2024 <a href="vacya.me/"></a></span> · 
 
     <span>
         Powered by
